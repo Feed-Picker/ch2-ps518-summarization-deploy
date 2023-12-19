@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 # Load model dan tokenizer yang sudah di-train
 model = load_model('text-sum.h5', custom_objects={'AttentionLayer': AttentionLayer})
-with open('text_tokenizer.pickle', 'rb') as f:
+with open('text_tokenizer.pkl', 'rb') as f:
     tokenizer = pickle.load(f)
 
 max_text_len=250
